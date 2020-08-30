@@ -4,8 +4,10 @@ import {
   DisplayItem2,
   DisplayItem3,
   SearchBar,
+  DurationButtons,
 } from "./components";
 import { fetchData } from "./api";
+import { BrowserRouter as Router, Switch, Route } from "react-router";
 
 function createData(name, symbol, price, price_change_pct, volume) {
   return { name, symbol, price, price_change_pct, volume };
@@ -47,6 +49,7 @@ export default class App extends React.Component {
   }
 
   getSpecificRequest() {
+    //Not working
     const { data, specific, search } = this.state;
     console.log("search: ", search);
     //this.setState({ specific: true });
@@ -104,10 +107,21 @@ export default class App extends React.Component {
     return (
       <div style={{ position: "absolute", textAlign: "center" }}>
         <h1>Krypto v1</h1>
-        <SearchBar
-          getSpecificRequest={this.getSpecificRequest}
-          handleChange={this.handleChange}
-        />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <DurationButtons />
+          <SearchBar
+            getSpecificRequest={this.getSpecificRequest}
+            handleChange={this.handleChange}
+          />
+        </div>
+
         <DisplayItem3 data={data} sortBy={this.sortBy} />
       </div>
     );
