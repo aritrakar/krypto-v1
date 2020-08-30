@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+* {
+  font-family: "Alata", sans-serif;
+}
+
+.search {
+  margin: 20px;
+}

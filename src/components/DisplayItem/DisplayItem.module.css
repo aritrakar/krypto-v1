@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+* {
+  font-family: "Alata", sans-serif;
+}
+
+.tableContainer {
+  text-align: center;
+  min-width: 300px;
+}
+
+.nameContainer {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.nameContainer > img {
+  margin-right: 10px;
+}
+
+.header {
+  font-size: 25px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#symbol {
+  padding-left: 10px;
+  font-size: 20px;
+}
